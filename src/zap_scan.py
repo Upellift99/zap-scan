@@ -51,8 +51,8 @@ def main():
     parser.add_argument('--api-key', action='store', type=str, help='ZAP API-Key', required=True, dest='api_key')
     parser.add_argument('--http_proxy', action='store', type=str, help='ZAP HTTP-Proxy [Default "127.0.0.1:8090"]',
                         dest='http_proxy', default='127.0.0.1:8090')
-    parser.add_argument('--https_proxy', action='store', type=str, help='ZAP HTTPS-Proxy [Default "27.0.0.1:8090"]',
-                        dest='https_proxy', default='127.0.0.1:8090')
+    parser.add_argument('--https_proxy', action='store', type=str, help='ZAP HTTPS-Proxy',
+                        dest='https_proxy', default=False)
     args = parser.parse_args()
 
     if not args.scan and not args.spider:
